@@ -20,6 +20,35 @@ function solveSudoku(gameArr) {
 
     return gameArr;
 }
+function possiblities(r, c, gameArr) {
+    var possArr = [];
+    var row = [];
+    var col = [];
+    var quad = [];
+    var k = 0;
+    var l = 0;
+    if (r <= 2) k = 0; else if (r <= 5) k = 3; else k = 6;
+    if (c <= 2) l = 0; else if (c <= 5) l = 3; else l = 6;
+
+    for (var i = 0; i < 9; i++) {
+        row.push(gameArr[i][c]);
+    }
+    for (var j = 0; j < 9; j++) {
+        col.push(gameArr[r][j]);
+    }
+    for (var i = k; i < k + 3; i++) {
+        for (var j = l; j < l + 3; j++) {
+            quad.push(gameArr[i][j]);
+        }
+    }
+
+    for (var n = 1; n < 10; n++) {
+        if (row.indexOf(n) === -1 && col.indexOf(n) === -1 && quad.indexOf(n) === -1) {
+            possArr.push(n);
+        }
+    }
+    return possArr;
+}
 
 
 
