@@ -77,6 +77,8 @@ var gameArr = [
         [0,4,0,0,5,0,0,3,6],
         [7,0,3,0,1,8,0,0,0],
 ];
+console.log('Input');
+console.log(gameArr);
 
 solveSudoku(gameArr);
 console.log('Solved');
