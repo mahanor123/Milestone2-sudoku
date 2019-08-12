@@ -1,5 +1,7 @@
 # Milestone2-sudoku
 
-Milestone2-sudoku_puzzle 
+Sudoku-Solver-JavaScript
+Solve Sudoku puzzle using backtracking algorithm implemented in JavaScript
 
-Sudoku_puzzle game make by javascript 
+Usage
+node Sudoku.js
