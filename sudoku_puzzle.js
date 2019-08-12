@@ -4,7 +4,7 @@ function solveSudoku(gameArr) {
     var r = emptySpot[0];
     var c = emptySpot[1];
 
-    // if (!isValidSudoku(gameArr)) return gameArr;
+
 
     if (r === -1) {
         return gameArr;
@@ -21,7 +21,7 @@ function solveSudoku(gameArr) {
 
     return gameArr;
 }
-
+// this loop for columns and rows
 function nextEmtySpot(gameArr) {
     for (var i = 0; i < 9; i++) {
         for (var j = 0; j < 9; j++) {
@@ -62,55 +62,6 @@ function possiblities(r, c, gameArr) {
     }
     return possArr;
 }
-// function checkQuadrant(r, c, gameArr) {
-//     var qudarantArr = [];
-//     for (var i = r; i < r + 3; i++) {
-//         for (var j = c; j < c + 3; j++) {
-//             if (qudarantArr.indexOf(gameArr[i][j]) === -1 || gameArr[i][j] === 0) {
-//                 qudarantArr.push(gameArr[i][j]);
-//             } else {
-//                 return false;
-//             }
-//         }
-//     }
-//     return true;
-// }
-// function isValidSudoku(gameArr) {
-//     if (!checkQuadrant(0, 0, gameArr)) return false;
-//     if (!checkQuadrant(0, 3, gameArr)) return false;
-//     if (!checkQuadrant(0, 6, gameArr)) return false;
-
-//     if (!checkQuadrant(3, 0, gameArr)) return false;
-//     if (!checkQuadrant(3, 3, gameArr)) return false;
-//     if (!checkQuadrant(3, 6, gameArr)) return false;
-
-//     if (!checkQuadrant(6, 0, gameArr)) return false;
-//     if (!checkQuadrant(6, 3, gameArr)) return false; 
-//     if (!checkQuadrant(6, 6, gameArr)) return false;
-
-//     for (var i = 0; i < gameArr.length; i++) {
-//         var rowNumbers = [];
-//         for (var j = 0; j < gameArr.length; j++) {
-//             if (rowNumbers.indexOf(gameArr[i][j]) === -1 || gameArr[i][j] === 0) {
-//                 rowNumbers.push(gameArr[i][j]);
-//             } else {
-//                 return false;
-//             }
-//         }
-//     }
-
-//     for (var i = 0; i < gameArr.length; i++) {
-//         var colNumbers = [];
-//         for (var j = 0; j < gameArr.length; j++) {
-//             if (colNumbers.indexOf(gameArr[j][i]) === -1 || gameArr[j][i] === 0) {
-//                 colNumbers.push(gameArr[j][i]);
-//             } else {
-//                 return false;
-//             }
-//         }
-//     }
-//     return true;
-// }
 
 //---------------------------------------------------Test-----------------------------------------------------------------
 
@@ -130,4 +81,3 @@ var gameArr = [
 solveSudoku(gameArr);
 console.log('Solved');
 console.log(gameArr);
-// console.log(isValidSudoku(gameArr));
