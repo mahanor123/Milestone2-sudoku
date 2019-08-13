@@ -11,7 +11,7 @@ function solveSudoku(gameArr) {
     };
 
     var possArr = possiblities(r, c, gameArr);
-// this loop for store the possiable value in Array.
+// this loop is to store the possible values in Array.
     for (var k = 0; k < possArr.length && nextEmtySpot(gameArr)[0] !== -1; k++) {
         gameArr[r][c] = possArr[k];
         solveSudoku(gameArr);
@@ -21,7 +21,7 @@ function solveSudoku(gameArr) {
 
     return gameArr;
 }
-// this loop for columns and rows
+// this loop is for columns and rows
 function nextEmtySpot(gameArr) {
     for (var i = 0; i < 9; i++) {
         for (var j = 0; j < 9; j++) {
@@ -65,7 +65,7 @@ function possiblities(r, c, gameArr) {
 
 //---------------------------------------------------Test-----------------------------------------------------------------
 
-// this is Array in this Array i am storing the puzzle data. 
+//  in this Array i am storing the puzzle data. 
 var gameArr = [
         [0,0,0,2,6,0,7,0,1],
         [6,8,0,0,7,0,0,9,0],
